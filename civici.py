@@ -1,4 +1,4 @@
-﻿# coding=UTF-8
+# coding=UTF-8
 
 """
 ogr2osm translation rules for Sondrio address data
@@ -29,11 +29,12 @@ class TranslateCivici(ogr2osm.TranslationBase):
 
         tags["addr:housenumber"] = attrs["CIVICO"].lower()
         tags["addr:street"] = attrs["NOME_VIA"]
-        tags["was:addr:housenumber"] = attrs["CIVICO_OLD"]
-        tags["was:addr:street"] = attrs["NOMEVIAOLD"]
         tags["addr:postcode"] = attrs["CAP"]
         tags["addr:city"]= attrs["NOME_COM"]
-	   
+
+        if attrs["CIVICO_OLD"] != "" and attrs["NOMEVIAOLD"] != "":
+            tags["was:addr:housenumber"] = attrs["CIVICO_OLD"]
+            tags["was:addr:street"] = attrs["NOMEVIAOLD"]
 
         return tags
  	
