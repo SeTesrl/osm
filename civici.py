@@ -34,7 +34,7 @@ class TranslateCivici(ogr2osm.TranslationBase):
 
         if attrs["CIVICO_OLD"] != "" and attrs["NOMEVIAOLD"] != "":
             tags["old_addr:housenumber"] = attrs["CIVICO_OLD"]
-            tags["old_addr:street"] = attrs["NOMEVIAOLD"]
+            tags["old_addr:place"] = attrs["NOMEVIAOLD"]
 
         return tags
  	
