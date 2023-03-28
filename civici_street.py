@@ -1,7 +1,7 @@
 # coding=UTF-8
 
 """
-ogr2osm translation rules for Sondrio address data
+ogr2osm translation rules for street data
 
 Copyright (C) 2022 Andrea Musuruane <musuruan@gmail.com>
 
