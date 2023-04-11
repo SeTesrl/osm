@@ -14,7 +14,7 @@ Requires ogr2osm v1.0.0:
 https://github.com/roelderickx/ogr2osm
 
 Run with:
-ogr2osm -e 32632 -t civici.py -f Civici_OSM.shp
+ogr2osm -e 32632 -t civici_street.py -f Civici_OSM.shp
 """
 
 import ogr2osm
